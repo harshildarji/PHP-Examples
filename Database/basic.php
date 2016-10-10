@@ -2,7 +2,7 @@
 require('connect.php');
 ?>
 
-  <form action='index.php' method='GET'>
+  <form action='basic.php' method='GET'>
     User name:
     <br>
     <input type='text' name='uname'>
