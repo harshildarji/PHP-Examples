@@ -3,10 +3,14 @@ session_start();
 
 function loggedin(){
     if(isset($_SESSION['uid']) && !empty($_SESSION['uid'])){
-        user_data($_SESSION['uid']);
+        return TRUE;
     } else{
         include('login.php');
     }
+}
+
+if(loggedin()){
+    user_data($_SESSION['uid']);
 }
 
 function user_data($uid){
@@ -20,6 +24,4 @@ function user_data($uid){
     echo 'Wel come <strong>'.ucfirst($name).'</strong> [from: <strong>'.ucfirst($add).'</strong>]<br>';
     echo "<a href = 'logout.php'>Log out</a>";
 }
-
-loggedin();
 ?>

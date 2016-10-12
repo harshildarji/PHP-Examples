@@ -11,6 +11,7 @@ require('connect.php');
     <input type = 'submit' value = 'Log In'>
 </form>
 <a href = 'register.php'>Register</a>
+
 <?php
 if(isset($_POST['uname']) && isset($_POST['pwd'])){
     $uname = $_POST['uname'];
