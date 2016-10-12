@@ -15,9 +15,9 @@ function user_data($uid){
     $query = "SELECT * FROM `users` WHERE `id` = '".$id."'";
     $rows = mysql_fetch_assoc(mysql_query($query));
     $name = $rows['name'];
-    $dist = $rows['district'];
+    $add = $rows['address'];
     
-    echo 'Wel come <strong>'.ucfirst($name).'</strong> [from: <strong>'.ucfirst($dist).'</strong>]<br>';
+    echo 'Wel come <strong>'.ucfirst($name).'</strong> [from: <strong>'.ucfirst($add).'</strong>]<br>';
     echo "<a href = 'logout.php'>Log out</a>";
 }
 

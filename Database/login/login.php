@@ -8,7 +8,7 @@ require('connect.php');
     <input type = 'text' name = 'uname'><br><br>
     Password:<br>
     <input type = 'password' name = 'pwd'><br><br>
-    <input type = 'submit' value = 'Submit'>
+    <input type = 'submit' value = 'Log In'>
 </form>
 
 <?php

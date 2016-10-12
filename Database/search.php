@@ -12,7 +12,7 @@ require('connect.php');
     if(isset($_GET['search'])){
         $search = $_GET['search'];
         if(!empty($search)){
-            $query = "SELECT `name`, `district` FROM `users` WHERE `name` LIKE '%".mysql_real_escape_string($search)."%'";
+            $query = "SELECT `name`, `address` FROM `users` WHERE `name` LIKE '%".mysql_real_escape_string($search)."%'";
             if($query_run = mysql_query($query)){
                 $num_rows = mysql_num_rows($query_run);
                 if($num_rows == NULL){
@@ -21,9 +21,9 @@ require('connect.php');
                     echo '<strong>'.$num_rows.'</strong> results found:<br><br>';
                     while($rows = mysql_fetch_assoc($query_run)){
                         $name = $rows['name'];
-                        $dist = $rows['district'];
+                        $add = $rows['address'];
 
-                        echo '<strong>'.$name.'</strong> [from: <strong>'.$dist.'</strong>]<br>';
+                        echo '<strong>'.$name.'</strong> [from: <strong>'.$add.'</strong>]<br>';
                     }
                 }
             } else{
