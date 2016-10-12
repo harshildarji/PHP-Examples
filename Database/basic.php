@@ -11,7 +11,7 @@ require('connect.php');
     <input type='submit' value='Submit'>
   </form>
 
-  <?php
+<?php
 
 if(isset($_GET['uname'])){
     $uname = strtolower($_GET['uname']);
